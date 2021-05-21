@@ -100,6 +100,7 @@ namespace StokTakipProgrami
             resimYolu = "";
             numericUpDownFiyat.Value = 0;
             pictureBoxKayit.Image = null;
+            label12.Text = "";
         }
         private void buttonResim_Click(object sender, EventArgs e)
         {
@@ -189,7 +190,7 @@ namespace StokTakipProgrami
             
             komut = new OleDbCommand();
             komut.Connection = baglanti;
-            komut.CommandText = "update Urunler set UrunAdi=@urunad,Birim=@birim,Stok=@stok,Cinsi=@cinsi,Depo=@depo,SatisOnay=@satisonay,Aciklama=@aciklama,UrunResim=@urunresim,Fiyat=@fiyat";
+            komut.CommandText = "update Urunler set UrunAdi=@urunad,Birim=@birim,Stok=@stok,Cinsi=@cinsi,Depo=@depo,SatisOnay=@satisonay,Aciklama=@aciklama,UrunResim=@urunresim,Fiyat=@fiyat where Barkod="+ Convert.ToInt32(textBoxBarkod.Text)+"";
             komut.Parameters.AddWithValue("@urunad", textBoxUrunAd.Text);
             komut.Parameters.AddWithValue("@birim", comboBoxBirim.Text);
             komut.Parameters.AddWithValue("@stok", numericUpDownStok.Value);
@@ -251,11 +252,13 @@ namespace StokTakipProgrami
                 checkBoxSatis.Checked = Convert.ToBoolean(dt.Tables["Urunler"].Rows[e.RowIndex]["SatisOnay"]);
                 textBoxAciklama.Text = dt.Tables["Urunler"].Rows[e.RowIndex]["Aciklama"].ToString();
                 numericUpDownFiyat.Value = Convert.ToInt32(dt.Tables["Urunler"].Rows[e.RowIndex]["Fiyat"]);
+                pictureBoxKayit.ImageLocation = dt.Tables["Urunler"].Rows[e.RowIndex]["UrunResim"].ToString();
             }
         }
         
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            AlanlariTemizle();
             SecilenSatirinBilgileriniGetir(e);
         }
         void VerileriAraclaraDoldur()

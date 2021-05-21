@@ -30,14 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxGuncelle = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.checkBoxAraSatis = new System.Windows.Forms.CheckBox();
             this.buttonSilBarkod = new System.Windows.Forms.Button();
             this.buttonAraTur = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.comboBoxAraTur = new System.Windows.Forms.ComboBox();
             this.textBoxAraBarkod = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.buttonGuncelle = new System.Windows.Forms.Button();
             this.numericUpDownFiyat = new System.Windows.Forms.NumericUpDown();
             this.buttonKayitTamam = new System.Windows.Forms.Button();
@@ -68,10 +68,6 @@
             this.numericUpDownStok = new System.Windows.Forms.NumericUpDown();
             this.comboBoxDepo = new System.Windows.Forms.ComboBox();
             this.comboBoxCinsi = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBoxGuncelle = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -86,10 +82,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(528, 70);
@@ -104,42 +96,6 @@
             this.button5.Text = "Yenile";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(317, 9);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 51);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Ürün Sil";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(215, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 51);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Ürün Güncelle";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(113, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 51);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Ürün Ara";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(11, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 51);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ürün Ekle";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -186,6 +142,34 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Urun Ara";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label11.Location = new System.Drawing.Point(6, 128);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(183, 25);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Barkod Güncelleme";
+            // 
+            // textBoxGuncelle
+            // 
+            this.textBoxGuncelle.Location = new System.Drawing.Point(6, 156);
+            this.textBoxGuncelle.Name = "textBoxGuncelle";
+            this.textBoxGuncelle.Size = new System.Drawing.Size(178, 20);
+            this.textBoxGuncelle.TabIndex = 30;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button6.Location = new System.Drawing.Point(6, 182);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(174, 31);
+            this.button6.TabIndex = 29;
+            this.button6.Text = "Barkod Güncelle";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_2);
             // 
             // checkBoxAraSatis
             // 
@@ -305,6 +289,14 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Kayıt";
+            // 
+            // label12
+            // 
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Location = new System.Drawing.Point(343, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(149, 13);
+            this.label12.TabIndex = 22;
             // 
             // buttonGuncelle
             // 
@@ -518,43 +510,6 @@
             this.comboBoxCinsi.Size = new System.Drawing.Size(135, 21);
             this.comboBoxCinsi.TabIndex = 6;
             // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button6.Location = new System.Drawing.Point(6, 182);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(174, 31);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "Barkod Güncelle";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_2);
-            // 
-            // textBoxGuncelle
-            // 
-            this.textBoxGuncelle.Location = new System.Drawing.Point(6, 156);
-            this.textBoxGuncelle.Name = "textBoxGuncelle";
-            this.textBoxGuncelle.Size = new System.Drawing.Size(178, 20);
-            this.textBoxGuncelle.TabIndex = 30;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label11.Location = new System.Drawing.Point(6, 128);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(183, 25);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Barkod Güncelleme";
-            // 
-            // label12
-            // 
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Location = new System.Drawing.Point(343, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 13);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "label12";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,7 +519,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Stok Takip";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -584,10 +539,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
