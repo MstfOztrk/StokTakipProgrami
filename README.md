@@ -1,3 +1,3 @@
 # StokTakipProgrami
-Basit Stok Takip Programi
-Veritabanı Dosyası için lütfen iletişime geçiniz aksi taktirde çalışmayacaktır.
+-Basit Stok Takip Programi
+-Veritabanı Dosyasını Bin Klasorunun içine atınız.
